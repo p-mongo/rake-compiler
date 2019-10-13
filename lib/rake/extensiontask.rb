@@ -163,7 +163,7 @@ Java extension should be preferred.
         warn_once(jruby_compile_msg) if defined?(JRUBY_VERSION)
 
         chdir tmp_path do
-          sh make
+          sh make, 'V=1'
           if binary_path != File.basename(binary_path)
             cp File.basename(binary_path), binary_path
           end
